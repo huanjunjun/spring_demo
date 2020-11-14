@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<!-- 配置bean -->
+	<bean id="person" class="spring_demo.person">
+		<property name="name" value="hanmeimei"></property>
+	</bean>
+
+<!--     <bean id="Car" class="spring_demo.Car">
+		<property name="cname" value="本田"></property>
+		<property name="crop" value="日本"></property>
+		<property name="cprice" value="200000"></property>
+	</bean>  -->
+<!-- 	<bean id="Car1" class="spring_demo.Car">
+	  <constructor-arg value="宝马"></constructor-arg>
+	  <constructor-arg value="日本"></constructor-arg>
+	  <constructor-arg value="200000"></constructor-arg>
+	</bean> -->
+	<bean id="Car3" class="spring_demo.Car"
+	     p:cname="宝马"  p:crop="德国" p:cprice="200000" >
+	</bean>
+</beans>
